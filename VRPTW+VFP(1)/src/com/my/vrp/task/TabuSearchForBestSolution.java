@@ -19,7 +19,7 @@ import static com.my.vrp.param.Param.*;
  */
 public class TabuSearchForBestSolution {
 
-	private Solution globalBestSolution;
+	public static Solution globalBestSolution;
 
 	public Solution getGlobalBestSolution() {
 		return globalBestSolution;

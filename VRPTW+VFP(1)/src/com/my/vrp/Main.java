@@ -17,6 +17,7 @@ import com.my.vrp.task.SAForInitSolutionII;
 import com.my.vrp.task.TabuSearchForBestSolution;
 import com.my.vrp.task.TabuSearchForFiledSolution;
 import com.my.vrp.utils.DisMatrix;
+import com.my.vrp.utils.Draw;
 
 import static com.my.vrp.utils.DisMatrix.*;
 import static com.my.vrp.param.Param.*;
@@ -39,6 +40,7 @@ public class Main {
 			if(tabuSearchForBestSolution.tabuSearchII()) {
 				System.out.println("++++++++++最优解++++++++++");
 				tabuSearchForBestSolution.getGlobalBestSolution().showSolution();
+				Draw.draw();
 			}
 		
 			
