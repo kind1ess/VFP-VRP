@@ -38,7 +38,7 @@ public class Main {
 		long begintime = System.nanoTime();
 			TabuSearchForBestSolution tabuSearchForBestSolution = new TabuSearchForBestSolution();
 			if(tabuSearchForBestSolution.tabuSearchII()) {
-				System.out.println("++++++++++最优解++++++++++");
+				System.out.println("++++++++++Optimal Solution++++++++++");
 				tabuSearchForBestSolution.getGlobalBestSolution().showSolution();
 				Draw.draw();
 			}
@@ -47,6 +47,6 @@ public class Main {
 		long endtime = System.nanoTime();
 		double usedTime= (endtime - begintime)/(1e9);
 		System.out.println();
-		System.out.println("程序耗时："+usedTime+"s");
+		System.out.println("Program took："+usedTime+"s");
 	}
 }

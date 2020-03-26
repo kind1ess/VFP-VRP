@@ -26,7 +26,7 @@ public class TabuSearchForFiledSolution {
 	public boolean tabuSearch() {
 		SAForInitSolutionII saForInitSolutionII = new SAForInitSolutionII();
 		saForInitSolutionII.savingAlgorithm();
-		System.out.println("++++++++++节约算法初始解+++++++++");
+		System.out.println("++++++++++Initial Solution+++++++++");
 		saForInitSolutionII.getIniSolution().showSolution();
 		Solution initSolution =null ;//设置初始解
 		try {
@@ -127,7 +127,6 @@ public class TabuSearchForFiledSolution {
 				}
 			iter++;
 		}
-		System.out.println("迭代次数："+iter);
 		if(feasible) {
 			//bestSolution.setDistanceSolution(caculateDistanceSolutionII(bestSolution));
 			try {
@@ -138,7 +137,7 @@ public class TabuSearchForFiledSolution {
 			}
 		}
 		else
-			System.out.println("未找到可行解");
+			System.out.println("No Feasible Solution");
 		return feasible;
 	}
 }

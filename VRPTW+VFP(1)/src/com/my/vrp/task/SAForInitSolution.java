@@ -58,7 +58,7 @@ public class SAForInitSolution {
 	public Solution initSolution() {
 		Solution solution = new Solution();
 		for(int i=0;i<CLIENT_NUM1;i++) {
-			Route route = new Route("路径"+i);
+			Route route = new Route("Route"+i);
 			LinkedList<Node> nodes = new LinkedList<Node>();
 			nodes.add(depot.getDepot());
 			nodes.add(clients.getClients().get(i));

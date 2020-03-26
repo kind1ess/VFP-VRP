@@ -36,15 +36,15 @@ public class Solution implements Cloneable{
 		return "Solution [distanceSolution=" + distanceSolution + ", routesSolution=" + routesSolution + "]";
 	}
 	public void showSolution() {
-		System.out.println("路径：");
+		System.out.println("Routes：");
 		for (Route route : this.routesSolution) {
-			System.out.print(route.getName()+":\t");
+			System.out.print(route.getName()+" :\t");
 			for (Node node : route.getNodes()) {
 				System.out.print(node.getNumber()+"-->");
 			}
 			System.out.println();
 		}
-		System.out.println("距离：");
+		System.out.println("Distance：");
 		System.out.println(this.distanceSolution);
 	}
 	@Override

@@ -28,7 +28,7 @@ public class TabuSearchForBestSolution {
 	public boolean tabuSearchII() {
 		TabuSearchForFiledSolution tabuSearchForFiledSolution = new TabuSearchForFiledSolution();
 		if(tabuSearchForFiledSolution.tabuSearch()) {
-			System.out.println("++++++++++禁忌搜索第一阶段可行解+++++++++");
+			System.out.println("++++++++++Feasible Solution+++++++++");
 			tabuSearchForFiledSolution.getSolution().showSolution();
 			Solution incumbentSolution = null;
 			try {

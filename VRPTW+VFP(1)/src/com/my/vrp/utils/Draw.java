@@ -47,7 +47,7 @@ public class Draw extends Frame{
 		}
 		Depot depot = new Depot();
 		Node node = depot.getDepot();
-		String depotName = "配送中心"+"("+node.getXCoor()+","+node.getYCoor()+")";
+		String depotName = "Depot"+"("+node.getXCoor()+","+node.getYCoor()+")";
 		int depotX = (int)node.getXCoor()*10;
 		int depotY = (int)node.getYCoor()*10;
 		g.drawString(depotName, depotX, depotY);
@@ -59,7 +59,7 @@ public class Draw extends Frame{
 			int y = (int) clients.get(i).getYCoor();
 			String temp = x+""+y;
 			if(flagMap.get(temp)==null||!flagMap.get(temp)) {
-				String name = "客户"+num+"("+clients.get(i).getXCoor()+","+
+				String name = "Client"+num+"("+clients.get(i).getXCoor()+","+
 						clients.get(i).getYCoor()+")";
 				g.drawString(name, x*10, y*10);
 				flagMap.put(temp, true);
