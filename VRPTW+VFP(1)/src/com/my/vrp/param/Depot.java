@@ -17,7 +17,7 @@ public class Depot {
 	private Node depot = new Node();
 	public Depot() {
 		try {
-			Scanner scanner = new Scanner(new FileReader("3lcvrp01.txt"));	
+			Scanner scanner = new Scanner(new FileReader("exm27.txt"));	
 			depot.setNumber(scanner.nextInt());
 			depot.setXCoor(scanner.nextDouble());
 			depot.setYCoor(scanner.nextDouble());

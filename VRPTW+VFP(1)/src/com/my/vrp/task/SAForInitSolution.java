@@ -82,7 +82,7 @@ public class SAForInitSolution {
 		ArrayList<L> LSequence = caculateLSequence();
 		//这个嵌套循环我很无奈，不知道以后可不可以改一改
 		for(int i=0;i<LSequence.size();i++) {
-			if(solution.getRoutesSolution().size()<=4)
+			if(solution.getRoutesSolution().size()<=VEHICLE_NUM)
 				break;
 			//System.out.println("i="+i);
 			for(int j=0;j<solution.getRoutesSolution().size();j++) {

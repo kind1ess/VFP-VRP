@@ -28,7 +28,7 @@ public class FeasibleJudge {
 				num++;
 		}
 		ExcessWeight excessWeight = new ExcessWeight(solution.getRoutesSolution());
-		if(excessWeight.getExcessWeight()==0&&num==4)
+		if(excessWeight.getExcessWeight()==0&&num==VEHICLE_NUM)
 			return true;
 		return false;
 		

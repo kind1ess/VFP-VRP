@@ -23,13 +23,14 @@ public class Client {
 
 	public Client() {
 		try {
-			Scanner scanner = new Scanner(new FileReader("3lcvrp01.txt"));
+			Scanner scanner = new Scanner(new FileReader("exm27.txt"));
 			scanner.nextInt();
 			scanner.nextDouble();
 			scanner.nextDouble();
 			scanner.nextDouble();
 			scanner.nextInt();
 			int num = 0;
+			int boxNum = 1;
 			for(int i=0;i<CLIENT_NUM;i++) {
 				Node client = new Node();
 				ArrayList<Box> boxes ;
@@ -42,10 +43,11 @@ public class Client {
 				for(int j=0;j<client.getGoodsNum();j++) {
 					boxes = new ArrayList<Box>();
 					Box box = new Box();
-					box.setNumber(scanner.nextInt());
+					box.setNumber(boxNum++);
 					box.setHeight(scanner.nextDouble());
 					box.setWidth(scanner.nextDouble());
 					box.setLength(scanner.nextDouble());
+					scanner.nextDouble();
 					boxes.add(box);
 					try {
 						Node clientClone = (Node) client.clone();

@@ -12,31 +12,31 @@ public class Param {
 	/**
 	 * 客户个数
 	 */
-	public static final int CLIENT_NUM = 15;
+	public static final int CLIENT_NUM = 100;
 	/**
 	 * 拆分后客户数量
 	 */
-	public static final int CLIENT_NUM1 = 32;
+	public static final int CLIENT_NUM1 = 198;
 	/**
 	 * 结点个数
 	 */
-	public static final int NODE_NUM = 16;
+	public static final int NODE_NUM = 101;
 	/**
 	 * 拆分后结点数量
 	 */
-	public static final int NODE_NUM1 = 33;
+	public static final int NODE_NUM1 = 199;
 	/**
 	 * 包裹个数
 	 */
-	public static final int BOX_NUM = 32;
+	public static final int BOX_NUM = 198;
 	/**
 	 * 最大车辆数
 	 */
-	public static final int VEHICLE_NUM = 4;
+	public static final int VEHICLE_NUM = 23;
 	/**
 	 * 车辆容量（载重）
 	 */
-	public static final double VEHICLE_CAPACITY = 90;
+	public static final double VEHICLE_CAPACITY = 112;
 	/**
 	 * 车辆高度
 	 */
