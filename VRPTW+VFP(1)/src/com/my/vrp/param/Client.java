@@ -23,7 +23,7 @@ public class Client {
 
 	public Client() {
 		try {
-			Scanner scanner = new Scanner(new FileReader("exm27.txt"));
+			Scanner scanner = new Scanner(new FileReader("3l_cvrp27.txt"));
 			scanner.nextInt();
 			scanner.nextDouble();
 			scanner.nextDouble();

@@ -10,27 +10,27 @@ public class Param {
 		new PenaltyFactor();
 	}
 	/**
+	 * 包裹个数
+	 */
+	public static final int BOX_NUM = 198;
+	/**
 	 * 客户个数
 	 */
 	public static final int CLIENT_NUM = 100;
 	/**
 	 * 拆分后客户数量
 	 */
-	public static final int CLIENT_NUM1 = 198;
+	public static final int CLIENT_NUM1 = BOX_NUM;
 	/**
 	 * 结点个数
 	 */
-	public static final int NODE_NUM = 101;
+	public static final int NODE_NUM = CLIENT_NUM+1;
 	/**
 	 * 拆分后结点数量
 	 */
-	public static final int NODE_NUM1 = 199;
+	public static final int NODE_NUM1 = CLIENT_NUM1+1;
 	/**
-	 * 包裹个数
-	 */
-	public static final int BOX_NUM = 198;
-	/**
-	 * 最大车辆数
+	 * 最大车辆数8
 	 */
 	public static final int VEHICLE_NUM = 23;
 	/**
