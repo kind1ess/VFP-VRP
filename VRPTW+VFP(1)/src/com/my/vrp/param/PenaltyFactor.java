@@ -12,7 +12,7 @@ public class PenaltyFactor {
 	static {
 		new DisMatrix();
 	}
-	private double c;
+	public static double c;
 	public static double a;
 	public static double b;
 	double num1 = 0;
@@ -29,5 +29,4 @@ public class PenaltyFactor {
 		a = 20*c/VEHICLE_CAPACITY;
 		b = 20*c/VEHICLE_CAPACITY;
 	}
-	
 }

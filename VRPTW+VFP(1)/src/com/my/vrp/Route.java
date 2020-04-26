@@ -13,6 +13,8 @@ public class Route implements Cloneable{
 	private String name;
 	private double distance;
 	private LinkedList<Node> nodes;
+	private Carriage carriage;
+	
 	public Route() {
 		
 	}
@@ -20,6 +22,12 @@ public class Route implements Cloneable{
 		this.name = name;
 	}
 	
+	public Carriage getCarriage() {
+		return carriage;
+	}
+	public void setCarriage(Carriage carriage) {
+		this.carriage = carriage;
+	}
 	
 	public double getDistance() {
 		return distance;

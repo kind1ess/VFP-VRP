@@ -25,6 +25,7 @@ public  class Node implements Cloneable{
 	private double beginTime;//时间窗最早达到时间
 	private double endTime;//最晚到达时间
 	private double serviceTime;//服务时间
+	private double reachTime;
 	private ArrayList<Box> goods = new ArrayList<Box>();//客户的货物
 	public int getNumber() {
 		return number;
@@ -74,6 +75,13 @@ public  class Node implements Cloneable{
 	public void setServiceTime(double serviceTime) {
 		this.serviceTime = serviceTime;
 	}
+	
+	public double getReachTime() {
+		return reachTime;
+	}
+	public void setReachTime(double reachTime) {
+		this.reachTime = reachTime;
+	}
 	public ArrayList<Box> getGoods() {
 		return goods;
 	}
@@ -85,7 +93,7 @@ public  class Node implements Cloneable{
 	public String toString() {
 		return "Node [number=" + number + ", XCoor=" + XCoor + ", YCoor=" + YCoor + ", goodsNum=" + goodsNum
 				+ ", demands=" + demands + ", beginTime=" + beginTime + ", endTime=" + endTime + ", serviceTime="
-				+ serviceTime + ", goods=" + goods + "]";
+				+ serviceTime + ", reachTime=" + reachTime + ", goods=" + goods + "]";
 	}
 	@Override
 	public Object clone() throws CloneNotSupportedException {

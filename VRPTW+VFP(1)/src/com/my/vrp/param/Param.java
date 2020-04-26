@@ -9,14 +9,16 @@ public class Param {
 	static {
 		new PenaltyFactor();
 	}
+	
+	public static final double SERVICE_TIME = 3;
 	/**
 	 * 包裹个数
 	 */
-	public static final int BOX_NUM = 198;
+	public static final int BOX_NUM = 32;
 	/**
 	 * 客户个数
 	 */
-	public static final int CLIENT_NUM = 100;
+	public static final int CLIENT_NUM = 15;
 	/**
 	 * 拆分后客户数量
 	 */
@@ -32,11 +34,11 @@ public class Param {
 	/**
 	 * 最大车辆数8
 	 */
-	public static final int VEHICLE_NUM = 23;
+	public static final int VEHICLE_NUM = 4;
 	/**
 	 * 车辆容量（载重）
 	 */
-	public static final double VEHICLE_CAPACITY = 112;
+	public static final double VEHICLE_CAPACITY = 90;
 	/**
 	 * 车辆高度
 	 */
@@ -58,11 +60,16 @@ public class Param {
 	 */
 	public static final int MAX_ITER = 10000;
 	/**
-	 * 惩罚因子
+	 * 超重惩罚因子
 	 */
 	public static double A = a;
 	/**
-	 * 惩罚因子
+	 * 超长惩罚因子
 	 */
 	public static double B = b;
+	/**
+	 * 时间窗惩罚因子
+	 */
+	public static double C = 20*c/SERVICE_TIME;
+	
 }

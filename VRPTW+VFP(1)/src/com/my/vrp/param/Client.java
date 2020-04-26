@@ -23,7 +23,8 @@ public class Client {
 
 	public Client() {
 		try {
-			Scanner scanner = new Scanner(new FileReader("3l_cvrp27.txt"));
+			Scanner scanner = new Scanner(new FileReader("3l_cvrp01.txt"));
+			Scanner scannerTw = new Scanner(new FileReader("3l_cvrptw01.txt"));
 			scanner.nextInt();
 			scanner.nextDouble();
 			scanner.nextDouble();
@@ -40,6 +41,9 @@ public class Client {
 				client.setYCoor(scanner.nextDouble());
 				client.setDemands(scanner.nextDouble());
 				client.setGoodsNum(scanner.nextInt());
+				double beginTime = scannerTw.nextDouble();
+				double endTime = scannerTw.nextDouble();
+				double serviceTime = scannerTw.nextDouble();
 				for(int j=0;j<client.getGoodsNum();j++) {
 					boxes = new ArrayList<Box>();
 					Box box = new Box();
@@ -54,22 +58,24 @@ public class Client {
 						clientClone.setNumber(client.getNumber()+j);
 						clientClone.setDemands(client.getDemands()/client.getGoodsNum());
 						clientClone.setGoods(boxes);
-						clientClone.setBeginTime(0);
-						clientClone.setEndTime(0);
-						clientClone.setServiceTime(0);
+						clientClone.setBeginTime(beginTime);
+						clientClone.setEndTime(endTime);
+						clientClone.setServiceTime(serviceTime/client.getGoodsNum());
 						this.clients.add(clientClone);
 					} catch (CloneNotSupportedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					
 				}
 				num = clients.get(clients.size()-1).getNumber();
 			}
+			
 			scanner.close();		
+			scannerTw.close();
 		}catch(FileNotFoundException e) {
 			System.out.println("文件未找到");
 			System.exit(-1);
 		}
+		
 	}
 }
