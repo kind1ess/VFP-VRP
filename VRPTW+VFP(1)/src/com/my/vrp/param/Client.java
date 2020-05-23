@@ -9,7 +9,7 @@ import com.my.vrp.Box;
 import com.my.vrp.Node;
 import static com.my.vrp.param.Param.*;
 /**
- * 瀹㈡埛缁撶偣淇℃伅
+ * 客户节点类
  * @author dell
  *
  */
@@ -23,8 +23,8 @@ public class Client {
 
 	public Client() {
 		try {
-			Scanner scanner = new Scanner(new FileReader("3l_cvrp01.txt"));
-			Scanner scannerTw = new Scanner(new FileReader("3l_cvrptw01.txt"));
+			Scanner scanner = new Scanner(new FileReader("3l_cvrp10.txt"));
+			Scanner scannerTw = new Scanner(new FileReader("3l_cvrptw10.txt"));
 			scanner.nextInt();
 			scanner.nextDouble();
 			scanner.nextDouble();

@@ -1,5 +1,7 @@
 package com.my.test;
 
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 import com.my.vrp.Node;
@@ -20,11 +22,20 @@ public class ReachTimeTest {
 		System.out.println(new ExcessTime(tsfbs.globalBestSolution).getExcessTime());
 		Solution solution = ReachTime.caculateReachTime(tsfbs.globalBestSolution);
 		List<Route> routes = solution.getRoutesSolution();
+		List<Node> allNodeList = new LinkedList<>();
 		for (Route route : routes) {
-			for (Node node : route.getNodes()) {
-				if(node.getReachTime()<node.getBeginTime()||node.getReachTime()>node.getEndTime())
-				System.out.println(node.getNumber()+":\t"+node.getBeginTime()+"\t"+node.getEndTime()+"\t"+node.getReachTime());
-			}	
+			List<Node> nodeList = route.getNodes();
+//			Collections.sort(nodeList);
+//			for (Node node : nodeList) {
+////				if(node.getReachTime()<node.getBeginTime()||node.getReachTime()>node.getEndTime())
+//				System.out.println(node.getNumber()+":\t"+node.getBeginTime()+"\t"+node.getEndTime()+"\t"+node.getReachTime());
+//			}	
+			allNodeList.addAll(nodeList);
+		}
+		Collections.sort(allNodeList);
+		for (Node node : allNodeList) {
+			if(node.getReachTime()<node.getBeginTime()||node.getReachTime()>node.getEndTime())
+			System.out.println(node.getNumber()+":\t"+node.getBeginTime()+"\t"+node.getEndTime()+"\t"+node.getReachTime());
 		}
 	} 
 }

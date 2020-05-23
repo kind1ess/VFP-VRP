@@ -16,7 +16,7 @@ import java.util.Iterator;
  * @author dell
  *
  */
-public  class Node implements Cloneable{
+public  class Node implements Cloneable,Comparable<Node>{
 	private int number;
 	private double XCoor;
 	private double YCoor;
@@ -111,6 +111,16 @@ public  class Node implements Cloneable{
 		}
 		node.setGoods(boxes);
 		return node;
+	}
+	@Override
+	public int compareTo(Node o) {
+		// TODO Auto-generated method stub
+		if (this.number>o.number) {
+			return 1;
+		}else if(this.number<o.number) {
+			return -1;
+		}
+		return 0;
 	}
 	
 }

@@ -29,7 +29,7 @@ public class FeasibleJudge {
 		}
 		ExcessWeight excessWeight = new ExcessWeight(solution.getRoutesSolution());
 		double excessTime = new ExcessTime(solution).getExcessTime();
-		if(excessWeight.getExcessWeight()==0&&num==VEHICLE_NUM&&excessTime==0)
+		if (excessWeight.getExcessWeight() == 0 && num == VEHICLE_NUM &&excessTime==0)
 			return true;
 		return false;
 		

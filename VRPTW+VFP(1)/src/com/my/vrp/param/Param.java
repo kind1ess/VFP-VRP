@@ -14,11 +14,11 @@ public class Param {
 	/**
 	 * 包裹个数
 	 */
-	public static final int BOX_NUM = 32;
+	public static final int BOX_NUM = 62;
 	/**
 	 * 客户个数
 	 */
-	public static final int CLIENT_NUM = 15;
+	public static final int CLIENT_NUM = 29;
 	/**
 	 * 拆分后客户数量
 	 */
@@ -34,11 +34,11 @@ public class Param {
 	/**
 	 * 最大车辆数8
 	 */
-	public static final int VEHICLE_NUM = 4;
+	public static final int VEHICLE_NUM = 8;
 	/**
 	 * 车辆容量（载重）
 	 */
-	public static final double VEHICLE_CAPACITY = 90;
+	public static final double VEHICLE_CAPACITY = 4500;
 	/**
 	 * 车辆高度
 	 */

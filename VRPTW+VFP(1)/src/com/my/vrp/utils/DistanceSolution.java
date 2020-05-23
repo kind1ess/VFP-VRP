@@ -39,8 +39,8 @@ public class DistanceSolution {
 				double excessLengthPunish = excessLength.getExcessLength();
 				double excessWeightPulish = excessWeight.getExcessWeight();
 				double excessTimePunish = new ExcessTime(solution).getExcessTime();
-				distance+=Math.pow(excessLengthPunish, 2)*B+Math.pow(excessWeightPulish, 2)*A
-						+Math.pow(excessTimePunish, 2)*C;
+				distance+=Math.pow(excessLengthPunish, 4)*B+Math.pow(excessWeightPulish, 4)*A
+						+Math.pow(excessTimePunish, 3)*C;
 				return distance;
 	}
 	/**
