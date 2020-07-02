@@ -13,9 +13,9 @@ public class DisMatrix {
 	private double[][]disMatrix;
 	public  DisMatrix() {
 		AllNodes allNodes = new AllNodes();
-		double[][] Graph = new double[NODE_NUM1][NODE_NUM1];
-		for(int i=0;i<NODE_NUM1;i++) {
-			for(int j=0;j<NODE_NUM1;j++) {
+		double[][] Graph = new double[NODE_NUM][NODE_NUM];
+		for(int i=0;i<NODE_NUM;i++) {
+			for(int j=0;j<NODE_NUM;j++) {
 				Graph[i][j] = caculateDistance(allNodes.getAllNodes().get(i), allNodes.getAllNodes().get(j));
 			}
 		}

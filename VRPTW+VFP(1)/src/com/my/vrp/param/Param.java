@@ -12,63 +12,63 @@ public class Param {
 	
 	public static final double SERVICE_TIME = 3;
 	/**
-	 * 包裹个数
+	 * Box quantity
 	 */
 	public static final int BOX_NUM = 62;
 	/**
-	 * 客户个数
+	 * Client quantity
 	 */
 	public static final int CLIENT_NUM = 29;
 	/**
-	 * 拆分后客户数量
+	 * Client quantity after splitting
 	 */
 	public static final int CLIENT_NUM1 = BOX_NUM;
 	/**
-	 * 结点个数
+	 * Node quantity
 	 */
 	public static final int NODE_NUM = CLIENT_NUM+1;
 	/**
-	 * 拆分后结点数量
+	 * Node quantity after splitting
 	 */
 	public static final int NODE_NUM1 = CLIENT_NUM1+1;
 	/**
-	 * 最大车辆数8
+	 * Max quantity of vehicle
 	 */
 	public static final int VEHICLE_NUM = 8;
 	/**
-	 * 车辆容量（载重）
+	 * Vehicle capacity
 	 */
 	public static final double VEHICLE_CAPACITY = 4500;
 	/**
-	 * 车辆高度
+	 * Vehicle height
 	 */
 	public static final double VEHICLE_HEIGHT = 30;
 	/**
-	 * 车辆宽度
+	 * Vehicle width
 	 */
 	public static final double VEHICLE_WIDTH = 25;
 	/**
-	 * 无穷大
+	 * Infinity
 	 */
 	public static final double INF = Double.MAX_VALUE;
 	/**
-	 * 车辆长度
+	 * Vehicle length
 	 */
 	public static final double VEHICLE_LENGTH = 60;
 	/**
-	 * 最大迭代次数
+	 * Max number of iterations
 	 */
 	public static final int MAX_ITER = 10000;
 	/**
-	 * 超重惩罚因子
+	 * Overweight penalty factor
 	 */
 	public static double A = a;
 	/**
-	 * 超长惩罚因子
+	 * Over length penalty factor
 	 */
 	public static double B = b;
 	/**
-	 * 时间窗惩罚因子
+	 * Time window penalty factor
 	 */
 	public static double C = 20*c/SERVICE_TIME;
 	

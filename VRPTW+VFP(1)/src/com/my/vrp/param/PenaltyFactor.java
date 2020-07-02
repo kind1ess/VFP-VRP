@@ -27,6 +27,6 @@ public class PenaltyFactor {
 		}
 		c = num1/num2;
 		a = 20*c/VEHICLE_CAPACITY;
-		b = 20*c/VEHICLE_CAPACITY;
+		b = 20*c/VEHICLE_LENGTH;
 	}
 }

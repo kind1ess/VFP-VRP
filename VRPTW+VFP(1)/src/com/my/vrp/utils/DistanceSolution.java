@@ -5,6 +5,8 @@ import static com.my.vrp.param.Param.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+
+import com.my.vrp.utils.ExcessTime;
 import com.my.vrp.Carriage;
 import com.my.vrp.Node;
 import com.my.vrp.Route;
@@ -38,7 +40,8 @@ public class DistanceSolution {
 				ExcessWeight excessWeight = new ExcessWeight(solution.getRoutesSolution());
 				double excessLengthPunish = excessLength.getExcessLength();
 				double excessWeightPulish = excessWeight.getExcessWeight();
-				double excessTimePunish = new ExcessTime(solution).getExcessTime();
+				ExcessTime excessTime = new ExcessTime(solution);
+				double excessTimePunish = excessTime.getExcessTime();
 				distance+=Math.pow(excessLengthPunish, 4)*B+Math.pow(excessWeightPulish, 4)*A
 						+Math.pow(excessTimePunish, 3)*C;
 				return distance;

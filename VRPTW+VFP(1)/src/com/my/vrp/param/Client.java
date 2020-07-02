@@ -34,9 +34,9 @@ public class Client {
 			int boxNum = 1;
 			for(int i=0;i<CLIENT_NUM;i++) {
 				Node client = new Node();
-				ArrayList<Box> boxes ;
+				ArrayList<Box> boxes = new ArrayList<Box>();
 				client.setNumber(scanner.nextInt());
-				client.setNumber(num+1);
+//				client.setNumber(num+1);
 				client.setXCoor(scanner.nextDouble());
 				client.setYCoor(scanner.nextDouble());
 				client.setDemands(scanner.nextDouble());
@@ -44,8 +44,11 @@ public class Client {
 				double beginTime = scannerTw.nextDouble();
 				double endTime = scannerTw.nextDouble();
 				double serviceTime = scannerTw.nextDouble();
+				//拆分前
+				client.setBeginTime(beginTime);
+				client.setEndTime(endTime);
+				client.setServiceTime(serviceTime);
 				for(int j=0;j<client.getGoodsNum();j++) {
-					boxes = new ArrayList<Box>();
 					Box box = new Box();
 					box.setNumber(boxNum++);
 					box.setHeight(scanner.nextDouble());
@@ -53,21 +56,33 @@ public class Client {
 					box.setLength(scanner.nextDouble());
 					scanner.nextDouble();
 					boxes.add(box);
-					try {
-						Node clientClone = (Node) client.clone();
-						clientClone.setNumber(client.getNumber()+j);
-						clientClone.setDemands(client.getDemands()/client.getGoodsNum());
-						clientClone.setGoods(boxes);
-						clientClone.setBeginTime(beginTime);
-						clientClone.setEndTime(endTime);
-						clientClone.setServiceTime(serviceTime/client.getGoodsNum());
-						this.clients.add(clientClone);
-					} catch (CloneNotSupportedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
 				}
-				num = clients.get(clients.size()-1).getNumber();
+				client.setGoods(boxes);
+				this.clients.add(client);
+//				for(int j=0;j<client.getGoodsNum();j++) {
+//					boxes = new ArrayList<Box>();
+//					Box box = new Box();
+//					box.setNumber(boxNum++);
+//					box.setHeight(scanner.nextDouble());
+//					box.setWidth(scanner.nextDouble());
+//					box.setLength(scanner.nextDouble());
+//					scanner.nextDouble();
+//					boxes.add(box);
+//					try {
+//						Node clientClone = (Node) client.clone();
+//						clientClone.setNumber(client.getNumber()+j);
+//						clientClone.setDemands(client.getDemands()/client.getGoodsNum());
+//						clientClone.setGoods(boxes);
+//						clientClone.setBeginTime(beginTime);
+//						clientClone.setEndTime(endTime);
+//						clientClone.setServiceTime(serviceTime/client.getGoodsNum());
+//						this.clients.add(clientClone);
+//					} catch (CloneNotSupportedException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//				}
+//				num = clients.get(clients.size()-1).getNumber();
 			}
 			
 			scanner.close();		

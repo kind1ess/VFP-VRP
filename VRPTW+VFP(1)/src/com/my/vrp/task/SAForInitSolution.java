@@ -40,8 +40,8 @@ public class SAForInitSolution {
 	public ArrayList<L> caculateLSequence() {
 		ArrayList<L> LSequence = new ArrayList<L>();
 		double[][] Graph = disMatrix.getDisMatrix();
-		for(int i=1;i<NODE_NUM1;i++) {
-			for(int j=1;j<NODE_NUM1;j++) {
+		for(int i=1;i<NODE_NUM;i++) {
+			for(int j=1;j<NODE_NUM;j++) {
 				if(i!=j) {
 					L l = new L();
 					l.setI(i-1);
@@ -57,7 +57,7 @@ public class SAForInitSolution {
 	}
 	public Solution initSolution() {
 		Solution solution = new Solution();
-		for(int i=0;i<CLIENT_NUM1;i++) {
+		for(int i=0;i<CLIENT_NUM;i++) {
 			Route route = new Route("Route"+i);
 			LinkedList<Node> nodes = new LinkedList<Node>();
 			nodes.add(depot.getDepot());
@@ -71,7 +71,7 @@ public class SAForInitSolution {
 	public ArrayList<Carriage> initCarriages(){
 		ArrayList<Carriage> carriages = new ArrayList<Carriage>();
 		//初始化n辆车
-		for(int i=0;i<CLIENT_NUM1;i++) {
+		for(int i=0;i<CLIENT_NUM;i++) {
 			carriages.add(new Carriage());
 		}
 		return carriages;
